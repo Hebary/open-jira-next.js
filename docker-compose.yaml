@@ -1,0 +1,9 @@
+services:
+  entriesDB:
+    image: mongo:5.0.0
+    container_name: entries-db
+    ports:
+      - 27017:27017
+    # if i delete the docker-img, the data will persist if i use volumes
+    volumes:
+      - ./mongo:/data/db
