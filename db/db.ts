@@ -1,10 +1,6 @@
 import mongoose from "mongoose"
-
 /*
-0 disconnected
-1 connected
-2 connecting
-3 disconnecting
+0 disconnected, 1 connected, 2 connecting, 3 disconnecting
 */ 
 export const mongoConnection = {
     isConnected: 0
@@ -43,7 +39,9 @@ export const connect = async () => {
 export const disconnect = () => {
     
     if(process.env.NODE_ENV ==='development') return;
+    
     if(mongoConnection.isConnected === 0) return;
         mongoose.disconnect();
         console.log('Disconnected from MongoDB');
 } 
+

@@ -7,6 +7,7 @@ type UIActionType =
   | { type: "[UI]-ON_DRAG_START" }
   | { type: "[UI]-ON_DRAG_END" }
 
+
 export const uiReducer = (state: UIState, action: UIActionType): UIState => {
 
   switch (action.type) {
@@ -40,7 +41,7 @@ export const uiReducer = (state: UIState, action: UIActionType): UIState => {
         ...state,
         isDragging: false,
       };
-      
+
     default:
       return state;
   }

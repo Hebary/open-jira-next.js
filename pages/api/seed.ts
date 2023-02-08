@@ -21,7 +21,7 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
         await Entry.insertMany(entries);
 
         await db.disconnect()
-        res.status(200).json({message: 'Successfull Process!' });
+        res.status(200).json({ message: 'Successfull Process!' });
     } catch(error) {
         console.log(error)
     }

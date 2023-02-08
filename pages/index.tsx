@@ -7,13 +7,13 @@ const HomePage: NextPage = () => {
 
   return (
     
-    <Layout title='Home - OpenJira'>
+    <Layout title='Welcome - Open Jira App'>
 
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4}>
 
-          <Card sx={{ height: 'calc(100vh - 100px)' }}>
-            <CardHeader title='Pending'/>
+          <Card sx={{ height: 'calc(100vh - 100px)', overflowY:'scroll' }}>
+            <CardHeader sx={{textAlign:'center'}} title='Pending'/>
               <NewEntry/>
               <EntryList status={ 'pending' }/>
           </Card>
@@ -21,15 +21,15 @@ const HomePage: NextPage = () => {
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          <Card sx={{ height: 'calc( 100vh - 100px )' }}>
-            <CardHeader title='In Progress'/>
+          <Card sx={{ height: 'calc( 100vh - 100px )', overflowY:'scroll' }}>
+            <CardHeader sx={{textAlign:'center'}} title='In Progress'/>
             <EntryList status={ 'in-progress' }/>
           </Card>
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          <Card sx={{ height: 'calc( 100vh - 100px )' }}>
-            <CardHeader title='Finished'/>
+          <Card sx={{ height: 'calc( 100vh - 100px )', overflowY:'scroll' }}>
+            <CardHeader sx={{textAlign:'center'}} title='Completed'/>
             <EntryList status={ 'finished' }/>
           </Card>
         </Grid>

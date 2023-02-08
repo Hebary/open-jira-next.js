@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { FC, useReducer } from 'react';
 import { UIContext, uiReducer } from './';
 
 
@@ -13,12 +13,12 @@ export interface UIState {
 }
 
 export const UI_INITIAL_STATE: UIState = {
-   isSidebarOpen: false,
-   isAddingEntry: false,
-   isDragging: false,
+    isSidebarOpen: false,
+    isAddingEntry: false,
+    isDragging: false,
 }
 
-export const UIProvider: React.FC<Props> = ({children}) => {
+export const UIProvider: FC<Props> = ({children}) => {
 
     const [state, dispatch] = useReducer(uiReducer, UI_INITIAL_STATE);
 
@@ -52,6 +52,8 @@ export const UIProvider: React.FC<Props> = ({children}) => {
             type: '[UI]-ON_DRAG_END',
         })
     }
+    
+    
 
     return (
         <UIContext.Provider
@@ -65,6 +67,8 @@ export const UIProvider: React.FC<Props> = ({children}) => {
 
                     startDragging,
                     endDragging,
+
+                  
                 }}>
             {children}
         </UIContext.Provider>

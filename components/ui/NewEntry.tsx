@@ -55,8 +55,8 @@ export const NewEntry: FC = () => {
 
           <Box display="flex" sx={{ mb: 1.5 }} justifyContent={"space-between"}>
             <Button
-              variant="outlined"
-              color="primary"
+              variant="contained"
+              // color="primary"
               endIcon={<CancelOutlinedIcon />}
               onClick={ handleCancel }
             >
@@ -65,8 +65,8 @@ export const NewEntry: FC = () => {
 
             <Button
               sx={{ ml: 2 }}
-              variant="outlined"
-              color="secondary"
+              variant="contained"
+              // color="secondary"
               endIcon={<SaveOutlinedIcon />}
               onClick={ onSave }
             >
@@ -77,7 +77,7 @@ export const NewEntry: FC = () => {
       ) : (
         <Button
           fullWidth
-          variant="outlined"
+          variant="contained"
           startIcon={<AddCircleOutlineOutlinedIcon />}
           onClick={() => setIsAddingaEntry(!isAddingEntry)}
           className='animate'

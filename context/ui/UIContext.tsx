@@ -2,6 +2,7 @@ import { createContext } from 'react';
 
 
 interface ContextUIProps {
+    
     isSidebarOpen: boolean;
     openSidebar: () => void;
     closeSidebar: () => void;
@@ -12,6 +13,7 @@ interface ContextUIProps {
     isDragging: boolean;
     startDragging: () => void;
     endDragging: () => void;
+
 }
 
 export const UIContext = createContext( {} as ContextUIProps );

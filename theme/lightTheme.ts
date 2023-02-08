@@ -8,10 +8,10 @@ export const lightTheme = createTheme({
             default: '#FFF2F2'
         },
         primary: {
-            main: '#8EA7E9'
+            main: '#8EA4E9'
         },
         secondary: {
-            main: '#7286D3'
+            main: '#73AEC3'
         },
         error: {
             main: red.A400
@@ -21,11 +21,13 @@ export const lightTheme = createTheme({
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#7286D3'
-                }
-
+                    backgroundColor: '#main.primary'
+                },
+            },
+            defaultProps: {
+                elevation: 0
             }
-        },
+        }        ,
         MuiIconButton: {
             styleOverrides: {
                 root: {
@@ -40,7 +42,16 @@ export const lightTheme = createTheme({
                 }
             }
          },
+         MuiButton:{
+            styleOverrides: {
+                root: {
+                    color: '#FFF',
+                    backgroundColor: 'main.primary',
+                }
+            }
+        }
     }
+
 });
   
   

@@ -5,7 +5,7 @@ export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: '#B6EADA'
+      main: '#0F4C75'
     },
     secondary: {
       main: "#5B8FB9",
@@ -15,10 +15,11 @@ export const darkTheme = createTheme({
     },
   },
   components: {
+    
       MuiAppBar:{
         styleOverrides: {
           root:{
-            backgroundColor: '#301E67'
+            backgroundColor: '#0F4C75'
           },
           
         },
