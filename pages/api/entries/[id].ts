@@ -54,7 +54,8 @@ export default function handler (req: NextApiRequest, res: NextApiResponse<Data>
             await db.disconnect();
             return res.status(400).json({ message:'Entry not found' });
         }
-        return res.status(200).json(dbEntry);
+        await db.disconnect();
+        res.status(200).json(dbEntry);
     }
 
     const deleteEntry = async (req: NextApiRequest, res: NextApiResponse) => {
